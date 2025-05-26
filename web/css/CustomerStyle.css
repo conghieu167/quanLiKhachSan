@@ -1276,7 +1276,7 @@ button {
     margin-top: 20px;
     width: 200px;
     padding: 15px;
-    background-color: #ee4d2d;
+    background-color: #5fbdfd;
     color: white;
     font-size: 16px;
     border: none;
@@ -1284,9 +1284,13 @@ button {
     cursor: pointer;
     float: right;
 }
-
+.service-item button{
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
 button:hover {
-    background-color: #d13c1f;
+    background-color: #0077cc;
 }
 
 .left-column-bookingform input[type="date"] {
@@ -1364,7 +1368,7 @@ button:hover {
 }
 
 .nav-card {
-    background-color: #e9f2ff;
+    background-color: white;
     border: 1px solid #cce0ff;
     cursor: pointer;
     text-decoration: none;
@@ -1530,6 +1534,8 @@ body {
 }
 
 .service-item {
+    position: relative;
+    height:250px;
     background-color: #fff;
     border-radius: 16px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);

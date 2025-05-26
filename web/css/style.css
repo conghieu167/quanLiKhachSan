@@ -225,9 +225,6 @@ th {
     background-color: #dc3545;
     color: white;
 }
-#addEmployeeForm {
-    display: none;
-}
 td input {
     box-sizing: border-box;
     padding: 12px;

@@ -4,7 +4,7 @@
  */
 
 
-function confirmDelete(maPhong) {
+function confirmDeleteRoom(maPhong) {
   var option = confirm("Bạn có chắc muốn xóa nhân viên " + maPhong);
   if (option == true) {
     window.location.href = "DeleteRoom?maPhong=" + maPhong;

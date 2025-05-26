@@ -78,7 +78,7 @@
                                     <p><strong>Mã Phòng:</strong> ${booking.maPhong}</p>
                                     <p><strong>Mã KH:</strong> ${booking.maKH}</p>
                                     <div class="date">
-                                        <p><strong>Ngày nhận:</strong> ${booking.ngayDat}0</p>
+                                        <p><strong>Ngày nhận:</strong> ${booking.ngayDat}</p>
                                         <p><strong>Ngày trả:</strong>${booking.ngayTra}</p>
                                     </div>
                                     <p class="trangthai"><strong>Trạng thái:</strong> ${booking.trangThai}</p>

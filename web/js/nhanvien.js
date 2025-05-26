@@ -1,27 +1,28 @@
 function addEmployee() {
-  document.getElementById("addEmployeeRow").style.display = "table-row";
+  document.getElementById("addEmployeeModal").style.display = "block";
 }
 
 function hideAddEmployee() {
-  document.getElementById("addEmployeeRow").style.display = "none";
+  document.getElementById("addEmployeeModal").style.display = "none";
 }
+
+// Đóng modal khi nhấn nút X hoặc nút Hủy
+document.getElementById("closeModal").onclick = hideAddEmployee;
+document.getElementById("cancelAdd").onclick = hideAddEmployee;
+
+// Đóng modal khi click bên ngoài nội dung modal
+window.onclick = function(event) {
+  const modal = document.getElementById("addEmployeeModal");
+  if (event.target === modal) {
+    hideAddEmployee();
+  }
+};
 function confirmDelete(maNV) {
   var option = confirm("Bạn có chắc muốn xóa nhân viên " + maNV);
   if (option == true) {
     window.location.href = "delete?maNV=" + maNV;
   }
 }
-function showEditForm(maNV) {
-    const editForms = document.querySelectorAll('.edit-form');
-    editForms.forEach(form => {
-        form.style.display = 'none';
-    });
-    const editForm = document.querySelector(`#editForm-${maNV}`);
-    if (editForm) {
-        editForm.style.display = 'table-row';  // Hiển thị form chỉnh sửa
-    }
-}
-
 function cancelEdit() {
     const editForms = document.querySelectorAll('.edit-form');
     editForms.forEach(form => {

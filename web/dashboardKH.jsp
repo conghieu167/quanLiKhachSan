@@ -38,7 +38,7 @@
     <div class="grid">
       <div class="card">
         <div class="card-title-grid">
-          <i class="fa-solid fa-door-open" style=" color: #f7b731;"></i>
+          <i class="fa-solid fa-door-open" style=" color: #0095f8;"></i>
           <p>Phòng đã đặt</p>
 
         </div>
@@ -46,7 +46,7 @@
       </div>
       <div class="card">
         <div class="card-title-grid">
-          <i class="fa-regular fa-chart-bar" style=" color: #4b7bec;"></i>
+          <i class="fa-regular fa-chart-bar" style=" color: #0095f8;"></i>
           <p>Dịch vụ đã dùng</p>
 
         </div>
@@ -54,7 +54,7 @@
       </div>
       <div class="card">
         <div class="card-title-grid">
-          <i class="fa-solid fa-money-bill-wave" style=" color: #20bf6b;"></i>
+          <i class="fa-solid fa-money-bill-wave" style=" color: #0095f8;"></i>
           <p>Tổng chi tiêu</p>
 
         </div>

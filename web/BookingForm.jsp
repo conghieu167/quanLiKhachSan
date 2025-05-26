@@ -29,11 +29,6 @@
                     <div class="booking-img">
                         <img src="./img/jakub-dziubak-gj7BLlSzIFs-unsplash.jpg" alt="Hình phòng khách sạn">
                     </div>
-    <!--        <p><strong>Mã KH:</strong> ${maKH}</p>
-            <p><strong>Phòng:</strong> ${phong.maPhong}</p>
-            <p><strong>Loại:</strong> ${phong.loaiPhong}</p>
-            <p><strong>Giá:</strong> ${phong.giaPhong}</p>
-            <div id="tongTien" style="margin-top: 10px; font-weight: bold; color: green;"></div>-->
                     <div class="booking-info">
                         <h2><strong>Mã KH:</strong> ${maKH}</h2>
                         <h3 class="room-id">${phong.maPhong}</h3>

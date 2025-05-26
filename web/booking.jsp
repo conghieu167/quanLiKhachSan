@@ -40,17 +40,7 @@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
                 <main class="main-content">
                     <div class="booking-wrapper">
                         <h1>Đặt Phòng</h1>
-                        <% if (request.getAttribute("message") != null) {%>
-                        <div style="color: green; font-weight: bold;">
-                            <%= request.getAttribute("message")%>
-                        </div>
-                        <% } %>
-
-                        <% if (request.getAttribute("error") != null) {%>
-                        <div style="color: red; font-weight: bold;">
-                            <%= request.getAttribute("error")%>
-                        </div>
-                        <% }%>
+                        
                         <div class="search-bar">                      
                             <form action="SearchRoom" method="get" class="booking-form">
                                 <div class="search-inputs">
@@ -118,6 +108,16 @@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
             </div>
         </div>
         <jsp:include page="footer.jsp"/>
+        <% if (request.getAttribute("message") != null) { %>
+    <script>
+        alert("<%= request.getAttribute("message") %>");
+    </script>
+<% } else if (request.getAttribute("error") != null) { %>
+    <script>
+        alert("<%= request.getAttribute("error") %>");
+    </script>
+<% } %>
+
         <script>
     // Lặp qua tất cả các form đặt phòng
     document.querySelectorAll('form[action="BookingForm"]').forEach(function(form) {

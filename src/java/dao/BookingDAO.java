@@ -2,6 +2,7 @@ package dao;
 
 import context.DBContext;
 import entity.DatPhong;
+import java.sql.Statement;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -13,27 +14,55 @@ import java.util.List;
 public class BookingDAO {
 
     public boolean addBooking(DatPhong booking) {
-        String sql = "INSERT INTO DatPhong (MaPhong, MaKH, NgayDat, NgayTra, TrangThai) VALUES (?, ?, ?, ?, ?)";
+    String sqlInsertBooking = "INSERT INTO DatPhong (MaPhong, MaKH, NgayDat, NgayTra, TrangThai) VALUES (?, ?, ?, ?, ?)";
+    String sqlInsertHoaDon = "INSERT INTO HoaDon (MaDP, MaPhong, MaKH, NgayTao, TongTien, TrangThai) VALUES (?, ?, ?, ?, ?, ?)";
 
-        try (Connection conn = new DBContext().getConnection(); PreparedStatement ps = conn.prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS)) {
+    try (Connection conn = new DBContext().getConnection();
+         PreparedStatement psBooking = conn.prepareStatement(sqlInsertBooking, Statement.RETURN_GENERATED_KEYS)) {
 
-            ps.setString(1, booking.getMaPhong());
-            ps.setString(2, booking.getMaKH());
+        // Set dữ liệu đặt phòng
+        psBooking.setString(1, booking.getMaPhong());
+        psBooking.setString(2, booking.getMaKH());
+        psBooking.setDate(3, java.sql.Date.valueOf(booking.getNgayDat()));
+        psBooking.setDate(4, java.sql.Date.valueOf(booking.getNgayTra()));
+        psBooking.setString(5, "Đã đặt");
 
-            // Chuyển LocalDate -> java.sql.Date
-            ps.setDate(3, java.sql.Date.valueOf(booking.getNgayDat()));
-            ps.setDate(4, java.sql.Date.valueOf(booking.getNgayTra()));
+        int rowsAffected = psBooking.executeUpdate();
 
-            ps.setString(5, "Đã đặt");
+        if (rowsAffected > 0) {
+            // Lấy MaDP vừa sinh
+            ResultSet rs = psBooking.getGeneratedKeys();
+            if (rs.next()) {
+                int maDP = rs.getInt(1);
 
-            ps.executeUpdate();
+                // Tính tổng tiền — ví dụ đơn giản: 1.000.000/ngày
+                long days = java.time.temporal.ChronoUnit.DAYS.between(
+                    booking.getNgayDat(), booking.getNgayTra());
+                long tongTien = days * 1000000; // Giá cứng, có thể thay bằng truy vấn phòng
 
-        } catch (SQLException e) {
-            e.printStackTrace();
+                // Thêm hóa đơn
+                try (PreparedStatement psHoaDon = conn.prepareStatement(sqlInsertHoaDon)) {
+                    psHoaDon.setInt(1, maDP);
+                    psHoaDon.setString(2, booking.getMaPhong());
+                    psHoaDon.setString(3, booking.getMaKH());
+                    psHoaDon.setTimestamp(4, new java.sql.Timestamp(System.currentTimeMillis()));
+                    psHoaDon.setLong(5, tongTien);
+                    psHoaDon.setString(6, "Đã thanh toán");
+
+                    psHoaDon.executeUpdate();
+                }
+
+                return true;
+            }
         }
 
-        return false;
+    } catch (SQLException e) {
+        e.printStackTrace();
     }
+
+    return false;
+}
+
 
     public List<DatPhong> getBookingsByUser(String maKH) {
         List<DatPhong> list = new ArrayList<>();
