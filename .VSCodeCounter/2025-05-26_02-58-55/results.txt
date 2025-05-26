@@ -1,0 +1,174 @@
+Date : 2025-05-26 02:58:55
+Directory : c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan
+Total : 114 files,  13714 codes, 1489 comments, 1739 blanks, all 16942 lines
+
+Languages
++------------+------------+------------+------------+------------+------------+
+| language   | files      | code       | comment    | blank      | total      |
++------------+------------+------------+------------+------------+------------+
+| CSS        |          6 |      6,094 |        212 |        800 |      7,106 |
+| HTML       |         39 |      2,976 |         56 |        277 |      3,309 |
+| Java       |         45 |      2,659 |        982 |        594 |      4,235 |
+| XML        |          9 |      1,476 |        193 |          9 |      1,678 |
+| JavaScript |         12 |        414 |         40 |         56 |        510 |
+| Properties |          3 |         95 |          6 |          3 |        104 |
++------------+------------+------------+------------+------------+------------+
+
+Directories
++-----------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                            | files      | code       | comment    | blank      | total      |
++-----------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                               |        114 |     13,714 |      1,489 |      1,739 |     16,942 |
+| . (Files)                                                                                                       |          1 |          5 |         66 |          1 |         72 |
+| build                                                                                                           |         30 |      4,737 |        153 |        565 |      5,455 |
+| build\web                                                                                                       |         30 |      4,737 |        153 |        565 |      5,455 |
+| build\web (Files)                                                                                               |         19 |      1,459 |         27 |        135 |      1,621 |
+| build\web\META-INF                                                                                              |          1 |          2 |          0 |          1 |          3 |
+| build\web\WEB-INF                                                                                               |          1 |         22 |          0 |          1 |         23 |
+| build\web\css                                                                                                   |          3 |      3,047 |        106 |        400 |      3,553 |
+| build\web\js                                                                                                    |          6 |        207 |         20 |         28 |        255 |
+| nbproject                                                                                                       |          7 |      1,518 |        133 |          7 |      1,658 |
+| nbproject (Files)                                                                                               |          5 |      1,498 |        133 |          5 |      1,636 |
+| nbproject\private                                                                                               |          2 |         20 |          0 |          2 |         22 |
+| src                                                                                                             |         44 |      2,652 |        980 |        590 |      4,222 |
+| src\java                                                                                                        |         44 |      2,652 |        980 |        590 |      4,222 |
+| src\java\context                                                                                                |          1 |         20 |          3 |          7 |         30 |
+| src\java\control                                                                                                |         27 |      1,249 |        902 |        271 |      2,422 |
+| src\java\control (Files)                                                                                        |          7 |        315 |        202 |         63 |        580 |
+| src\java\control\Booking                                                                                        |          6 |        303 |        191 |         65 |        559 |
+| src\java\control\DichVuManager                                                                                  |          2 |         95 |         85 |         20 |        200 |
+| src\java\control\NhanVien                                                                                       |          4 |        168 |        103 |         41 |        312 |
+| src\java\control\Phong                                                                                          |          4 |        175 |        158 |         39 |        372 |
+| src\java\control\Service                                                                                        |          2 |        100 |         82 |         19 |        201 |
+| src\java\control\ThongKe                                                                                        |          2 |         93 |         81 |         24 |        198 |
+| src\java\dao                                                                                                    |          8 |        802 |         40 |        159 |      1,001 |
+| src\java\entity                                                                                                 |          8 |        581 |         35 |        153 |        769 |
+| test                                                                                                            |          2 |         65 |          4 |         11 |         80 |
+| web                                                                                                             |         30 |      4,737 |        153 |        565 |      5,455 |
+| web (Files)                                                                                                     |         19 |      1,459 |         27 |        135 |      1,621 |
+| web\META-INF                                                                                                    |          1 |          2 |          0 |          1 |          3 |
+| web\WEB-INF                                                                                                     |          1 |         22 |          0 |          1 |         23 |
+| web\css                                                                                                         |          3 |      3,047 |        106 |        400 |      3,553 |
+| web\js                                                                                                          |          6 |        207 |         20 |         28 |        255 |
++-----------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-----------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| filename                                                                                                        | language   | code       | comment    | blank      | total      |
++-----------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\build.xml                                              | XML        |          5 |         66 |          1 |         72 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\build\web\BookingForm.jsp                              | HTML       |         99 |          5 |          8 |        112 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\build\web\DichVu.jsp                                   | HTML       |         72 |          3 |          6 |         81 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\build\web\DichVuKH.jsp                                 | HTML       |         77 |          0 |          5 |         82 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\build\web\HoaDon.jsp                                   | HTML       |         82 |          0 |          8 |         90 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\build\web\META-INF\context.xml                         | XML        |          2 |          0 |          1 |          3 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\build\web\NavBarKH.jsp                                 | HTML       |         35 |          2 |          2 |         39 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\build\web\NavBarQL.jsp                                 | HTML       |         23 |          1 |          0 |         24 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\build\web\QLdatphong.jsp                               | HTML       |         84 |          0 |         11 |         95 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\build\web\ThongKe.jsp                                  | HTML       |        132 |          5 |         19 |        156 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\build\web\UserInfo.jsp                                 | HTML       |        163 |          1 |          9 |        173 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\build\web\WEB-INF\web.xml                              | XML        |         22 |          0 |          1 |         23 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\build\web\addRoom.jsp                                  | HTML       |         67 |          0 |         11 |         78 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\build\web\booking.jsp                                  | HTML       |        128 |          3 |         10 |        141 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\build\web\css\CustomerStyle.css                        | CSS        |      1,886 |         56 |        325 |      2,267 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\build\web\css\reset.css                                | CSS        |         42 |          5 |          1 |         48 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\build\web\css\style.css                                | CSS        |      1,119 |         45 |         74 |      1,238 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\build\web\dashboard.jsp                                | HTML       |         29 |          0 |          2 |         31 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\build\web\dashboardKH.jsp                              | HTML       |        107 |          5 |         22 |        134 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\build\web\dashboardQL.jsp                              | HTML       |         44 |          0 |          5 |         49 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\build\web\footer.jsp                                   | HTML       |         11 |          0 |          0 |         11 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\build\web\js\UserInfor.js                              | JavaScript |         22 |          4 |          6 |         32 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\build\web\js\dichvu.js                                 | JavaScript |         16 |          2 |          3 |         21 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\build\web\js\nhanvien.js                               | JavaScript |         28 |          0 |          2 |         30 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\build\web\js\phong.js                                  | JavaScript |         28 |          8 |          6 |         42 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\build\web\js\quanly.js                                 | JavaScript |         12 |          0 |          3 |         15 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\build\web\js\thongke.js                                | JavaScript |        101 |          6 |          8 |        115 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\build\web\login.jsp                                    | HTML       |         60 |          0 |          5 |         65 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\build\web\nhanvien.jsp                                 | HTML       |        124 |          0 |          5 |        129 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\build\web\phong.jsp                                    | HTML       |         99 |          2 |          6 |        107 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\build\web\sidebar.jsp                                  | HTML       |         23 |          0 |          1 |         24 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\nbproject\ant-deploy.xml                               | XML        |         49 |         20 |          1 |         70 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\nbproject\build-impl.xml                               | XML        |      1,327 |        107 |          1 |      1,435 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\nbproject\genfiles.properties                          | Properties |          6 |          2 |          1 |          9 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\nbproject\private\private.properties                   | Properties |          4 |          0 |          1 |          5 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\nbproject\private\private.xml                          | XML        |         16 |          0 |          1 |         17 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\nbproject\project.properties                           | Properties |         85 |          4 |          1 |         90 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\nbproject\project.xml                                  | XML        |         31 |          0 |          1 |         32 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\src\java\context\DBContext.java                        | Java       |         20 |          3 |          7 |         30 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\src\java\control\Booking\BookingControl.java           | Java       |         36 |         39 |          8 |         83 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\src\java\control\Booking\BookingFormControl.java       | Java       |         87 |         27 |         17 |        131 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\src\java\control\Booking\CancelBookingControl.java     | Java       |         48 |         40 |         10 |         98 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\src\java\control\Booking\SearchBooking.java            | Java       |         49 |         43 |          9 |        101 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\src\java\control\Booking\SearchRoomControl.java        | Java       |         80 |         34 |         18 |        132 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\src\java\control\Booking\bookingDAO.java               | Java       |          3 |          8 |          3 |         14 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\src\java\control\DanhSachDatPhongControl.java          | Java       |         36 |         39 |          8 |         83 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\src\java\control\DashBoardKHConTrol.java               | Java       |         49 |         39 |          9 |         97 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\src\java\control\DichVuManager\DichVuControl.java      | Java       |         35 |         39 |          8 |         82 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\src\java\control\DichVuManager\EditServiceControl.java | Java       |         60 |         46 |         12 |        118 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\src\java\control\InvoiceControl.java                   | Java       |         47 |         40 |         10 |         97 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\src\java\control\LogOutControl.java                    | Java       |         17 |          2 |          6 |         25 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\src\java\control\LoginControl.java                     | Java       |         53 |          0 |          8 |         61 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\src\java\control\NhanVien\DeleteControl.java           | Java       |         34 |         39 |          8 |         81 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\src\java\control\NhanVien\EditControl.java             | Java       |         41 |         23 |         10 |         74 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\src\java\control\NhanVien\HomeControl.java             | Java       |         34 |         32 |          7 |         73 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\src\java\control\NhanVien\NhanVienControl.java         | Java       |         59 |          9 |         16 |         84 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\src\java\control\Phong\AddRoomControl.java             | Java       |         47 |         38 |         11 |         96 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\src\java\control\Phong\DeleteRoomControl.java          | Java       |         35 |         39 |          8 |         82 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\src\java\control\Phong\EditRoomControl.java            | Java       |         58 |         42 |         11 |        111 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\src\java\control\Phong\PhongControl.java               | Java       |         35 |         39 |          9 |         83 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\src\java\control\Service\DatDichVuControl.java         | Java       |         64 |         43 |         11 |        118 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\src\java\control\Service\DichVuKH.java                 | Java       |         36 |         39 |          8 |         83 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\src\java\control\ThongKe\LoaiPhongTK.java              | Java       |         40 |         40 |          8 |         88 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\src\java\control\ThongKe\ThongKeControl.java           | Java       |         53 |         41 |         16 |        110 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\src\java\control\UpdateUser.java                       | Java       |         53 |         41 |         11 |        105 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\src\java\control\UserInfoControl.java                  | Java       |         60 |         41 |         11 |        112 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\src\java\dao\BookingDAO.java                           | Java       |        123 |          1 |         31 |        155 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\src\java\dao\DAO.java                                  | Java       |        244 |          6 |         30 |        280 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\src\java\dao\QuanLyDAO.java                            | Java       |         33 |          8 |          7 |         48 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\src\java\dao\SearchDAO.java                            | Java       |         62 |          1 |         14 |         77 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\src\java\dao\ServiceDAO.java                           | Java       |         47 |          8 |         11 |         66 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\src\java\dao\TKDAO.java                                | Java       |        116 |          8 |         27 |        151 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\src\java\dao\UDDAO.java                                | Java       |         77 |          8 |         22 |        107 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\src\java\dao\UserDAO.java                              | Java       |        100 |          0 |         17 |        117 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\src\java\entity\DatDichVu.java                         | Java       |         71 |          3 |         18 |         92 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\src\java\entity\DatPhong.java                          | Java       |         62 |          8 |         17 |         87 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\src\java\entity\DichVu.java                            | Java       |         46 |         10 |         12 |         68 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\src\java\entity\HoaDon.java                            | Java       |        114 |          3 |         29 |        146 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\src\java\entity\Phong.java                             | Java       |         83 |          3 |         20 |        106 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\src\java\entity\QuanLy.java                            | Java       |         63 |          6 |         14 |         83 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\src\java\entity\User.java                              | Java       |         75 |          2 |         21 |         98 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\src\java\entity\nhanVien.java                          | Java       |         67 |          0 |         22 |         89 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\test\index.html                                        | HTML       |         58 |          2 |          7 |         67 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\test\test.java                                         | Java       |          7 |          2 |          4 |         13 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\web\BookingForm.jsp                                    | HTML       |         99 |          5 |          8 |        112 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\web\DichVu.jsp                                         | HTML       |         72 |          3 |          6 |         81 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\web\DichVuKH.jsp                                       | HTML       |         77 |          0 |          5 |         82 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\web\HoaDon.jsp                                         | HTML       |         82 |          0 |          8 |         90 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\web\META-INF\context.xml                               | XML        |          2 |          0 |          1 |          3 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\web\NavBarKH.jsp                                       | HTML       |         35 |          2 |          2 |         39 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\web\NavBarQL.jsp                                       | HTML       |         23 |          1 |          0 |         24 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\web\QLdatphong.jsp                                     | HTML       |         84 |          0 |         11 |         95 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\web\ThongKe.jsp                                        | HTML       |        132 |          5 |         19 |        156 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\web\UserInfo.jsp                                       | HTML       |        163 |          1 |          9 |        173 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\web\WEB-INF\web.xml                                    | XML        |         22 |          0 |          1 |         23 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\web\addRoom.jsp                                        | HTML       |         67 |          0 |         11 |         78 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\web\booking.jsp                                        | HTML       |        128 |          3 |         10 |        141 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\web\css\CustomerStyle.css                              | CSS        |      1,886 |         56 |        325 |      2,267 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\web\css\reset.css                                      | CSS        |         42 |          5 |          1 |         48 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\web\css\style.css                                      | CSS        |      1,119 |         45 |         74 |      1,238 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\web\dashboard.jsp                                      | HTML       |         29 |          0 |          2 |         31 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\web\dashboardKH.jsp                                    | HTML       |        107 |          5 |         22 |        134 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\web\dashboardQL.jsp                                    | HTML       |         44 |          0 |          5 |         49 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\web\footer.jsp                                         | HTML       |         11 |          0 |          0 |         11 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\web\js\UserInfor.js                                    | JavaScript |         22 |          4 |          6 |         32 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\web\js\dichvu.js                                       | JavaScript |         16 |          2 |          3 |         21 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\web\js\nhanvien.js                                     | JavaScript |         28 |          0 |          2 |         30 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\web\js\phong.js                                        | JavaScript |         28 |          8 |          6 |         42 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\web\js\quanly.js                                       | JavaScript |         12 |          0 |          3 |         15 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\web\js\thongke.js                                      | JavaScript |        101 |          6 |          8 |        115 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\web\login.jsp                                          | HTML       |         60 |          0 |          5 |         65 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\web\nhanvien.jsp                                       | HTML       |        124 |          0 |          5 |        129 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\web\phong.jsp                                          | HTML       |         99 |          2 |          6 |        107 |
+| c:\Users\ADMIN\Documents\NetBeansProjects\QuanLiKhachSan\web\sidebar.jsp                                        | HTML       |         23 |          0 |          1 |         24 |
+| Total                                                                                                           |            |     13,714 |      1,489 |      1,739 |     16,942 |
++-----------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+

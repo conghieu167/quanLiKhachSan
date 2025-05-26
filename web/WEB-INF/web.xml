@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="6.1" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_1.xsd">
+    <servlet>
+        <servlet-name>HomeControl</servlet-name>
+        <servlet-class>control.NhanVien.HomeControl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HomeControl</servlet-name>
+        <url-pattern>/nhanvien</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>JSP</servlet-name>
+        <servlet-class>org.apache.jasper.servlet.JspServlet</servlet-class>
+        <init-param>
+            <param-name>taglibs</param-name>
+            <param-value>/WEB-INF/lib/</param-value>
+        </init-param>
+    </servlet>
+    <welcome-file-list>
+        <welcome-file>login.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>
