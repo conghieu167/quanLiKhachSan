@@ -982,7 +982,6 @@ select {
 .booking-wrapper {
     position: sticky;
     top: 60px;
-    background-color: #E6F0FA;
     z-index: 10;
     padding-bottom: 10px;
 }

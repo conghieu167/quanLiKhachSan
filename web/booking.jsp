@@ -40,7 +40,7 @@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
                 <main class="main-content">
                     <div class="booking-wrapper">
                         <h1>Đặt Phòng</h1>
-                        
+
                         <div class="search-bar">                      
                             <form action="SearchRoom" method="get" class="booking-form">
                                 <div class="search-inputs">
@@ -49,14 +49,12 @@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
                                     <input type="date" name="checkin" id="checkin" required value="${checkin != null ? checkin : ''}" />
                                     <input type="date" name="checkout" id="checkout" required value="${checkout != null ? checkout : ''}" />
 
-                                    <!-- Số giường -->
                                     <select name="soGiuong">
                                         <option value="0" ${soGiuong == 0 ? "selected" : ""}>Tất cả giường</option>
                                         <option value="1" ${soGiuong == 1 ? "selected" : ""}>1 Giường</option>
                                         <option value="2" ${soGiuong == 2 ? "selected" : ""}>2 Giường</option>
                                     </select>
 
-                                    <!-- Tầng -->
                                     <select name="tang">
                                         <option value="0" ${tang == 0 ? "selected" : ""}>Tất cả tầng</option>
                                         <c:forEach begin="1" end="10" var="i">
@@ -64,7 +62,7 @@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
                                         </c:forEach>
                                     </select>
 
-                                    <!-- Loại phòng -->
+
                                     <select name="loaiPhong">
                                         <option value="" ${empty loaiPhong ? "selected" : ""}>Tất cả loại phòng</option>
                                         <option value="Standard" ${loaiPhong == 'Standard' ? 'selected' : ''}>Standard</option>
@@ -79,62 +77,85 @@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
                         </div>
                     </div>
                     <div class="room-results">
-                        <div class="room-list">
-                            <c:forEach var="phong" items="${listPhong}">
-                                <div class="room-card">
-                                    <div class="room-image">
-                                        <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=200&auto=format&fit=crop" alt="Phòng 501">
-                                    </div>
-                                    <div class="room-info">
-                                        <h3>Phòng ${phong.maPhong}</h3>
-                                        <p><strong>Loại:</strong> ${phong.loaiPhong}</p>
-                                        <p><strong>Tầng:</strong> ${phong.tang}</p>
-                                        <p><strong>Diện tích:</strong> ${phong.dienTich} m²</p>
-                                        <p><strong>Số giường:</strong> ${phong.soGiuong}</p>
-                                        <p><strong>Mô tả:</strong> ${phong.moTa}</p>
-                                    </div>
-                                    <div class="room-price">${phong.giaPhong} VND</div>
-                                    <form action="BookingForm" method="get">
-                                        <input type="hidden" name="maPhong" value="${phong.maPhong}" />
-                                        <input type="hidden" name="checkin" value="${checkin}" />
-                                        <input type="hidden" name="checkout" value="${checkout}" />
-                                        <button type="submit" class="booking-btn">Đặt phòng</button>
-                                    </form>
+                        <c:choose>
+                            <c:when test="${not empty listPhong}">
+                                <div class="room-list">
+                                    <c:forEach var="phong" items="${listPhong}">
+                                        <div class="room-card">
+                                            <div class="room-image">
+                                                <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=200&auto=format&fit=crop" alt="Phòng 501">
+                                            </div>
+                                            <div class="room-info">
+                                                <h3>Phòng ${phong.maPhong}</h3>
+                                                <p><strong>Loại:</strong> ${phong.loaiPhong}</p>
+                                                <p><strong>Tầng:</strong> ${phong.tang}</p>
+                                                <p><strong>Diện tích:</strong> ${phong.dienTich} m²</p>
+                                                <p><strong>Số giường:</strong> ${phong.soGiuong}</p>
+                                                <p><strong>Mô tả:</strong> ${phong.moTa}</p>
+                                            </div>
+                                            <div class="room-price">${phong.giaPhong} VND</div>
+                                            <form action="BookingForm" method="get">
+                                                <input type="hidden" name="maPhong" value="${phong.maPhong}" />
+                                                <input type="hidden" name="checkin" value="${checkin}" />
+                                                <input type="hidden" name="checkout" value="${checkout}" />
+                                                <button type="submit" class="booking-btn">Đặt phòng</button>
+                                            </form>
+                                        </div>
+                                    </c:forEach>
                                 </div>
-                            </c:forEach>
-                        </div>
-
+                            </c:when>
+                            <c:otherwise>
+                                <div class="no-rooms">
+                                    <p>Hiện tại không có phòng nào phù hợp với yêu cầu của bạn.</p>
+                                </div>
+                            </c:otherwise>
+                        </c:choose>
+                    </div>
                 </main>
             </div>
         </div>
         <jsp:include page="footer.jsp"/>
-        <% if (request.getAttribute("message") != null) { %>
-    <script>
-        alert("<%= request.getAttribute("message") %>");
-    </script>
-<% } else if (request.getAttribute("error") != null) { %>
-    <script>
-        alert("<%= request.getAttribute("error") %>");
-    </script>
-<% } %>
+        <% if (request.getAttribute("message") != null) {%>
+        <script>
+            alert("<%= request.getAttribute("message")%>");
+        </script>
+        <% } else if (request.getAttribute("error") != null) {%>
+        <script>
+            alert("<%= request.getAttribute("error")%>");
+        </script>
+        <% }%>
 
         <script>
-    // Lặp qua tất cả các form đặt phòng
-    document.querySelectorAll('form[action="BookingForm"]').forEach(function(form) {
-        form.addEventListener('submit', function(e) {
-            const checkin = document.getElementById('checkin').value;
-            const checkout = document.getElementById('checkout').value;
+            const bookingForm = document.querySelector('.booking-form');
+            if (bookingForm) {
+                const checkin = document.getElementById('checkin');
+                const checkout = document.getElementById('checkout');
 
-            if (!checkin || !checkout) {
-                e.preventDefault();
-                alert("Vui lòng chọn ngày nhận phòng và trả phòng trước khi đặt.");
-            } else if (new Date(checkin) > new Date(checkout)) {
-                e.preventDefault();
-                alert("Ngày nhận phòng phải trước hoặc bằng ngày trả phòng.");
+                // Lắng nghe thay đổi ngày checkin
+                checkin.addEventListener('change', function () {
+                    checkout.min = this.value; // checkout phải >= checkin
+                    if (checkout.value < this.value) {
+                        checkout.value = this.value; // tự động chỉnh ngày nếu sai
+                    }
+
+                    // Nếu ngày hợp lệ thì submit
+                    if (checkout.value && new Date(checkin.value) < new Date(checkout.value)) {
+                        bookingForm.submit();
+                    }
+                });
+
+                // Lắng nghe thay đổi ngày checkout
+                checkout.addEventListener('change', function () {
+                    if (checkout.value < checkin.value) {
+                        alert("Ngày nhận phòng không được trước ngày đặt phòng!");
+                        this.value = checkin.value;
+                    } else {
+                        // Nếu ngày hợp lệ thì submit
+                        bookingForm.submit();
+                    }
+                });
             }
-        });
-    });
-</script>
+        </script>
 
     </body>
 </html>

@@ -21,7 +21,6 @@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>L'hotel Manager</title>
         <link rel="stylesheet" href="./css/CustomerStyle.css">
-        <link rel="stylesheet" href="./css/reset.css" />
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -39,13 +38,14 @@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
                 width: 90%;
                 max-width: 1200px;
                 margin: 40px auto;
-            }         
+            }
         </style>
     </head>
     <body>
 
         <jsp:include page="NavBarKH.jsp" />
         <div class="container">    
+            <h2 style="margin:0">Danh sách dịch vụ: </h2>
             <div class="service-list">
                 <c:forEach var="dichVu" items="${listDichVu}">
                     <div class="service-item">
@@ -54,7 +54,7 @@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
                         <p class="GiaDV"><strong>Giá:</strong> ${dichVu.giaTien} VND</p>
                         <p class="ChiTietDV"><strong>Chi tiết:</strong> ${dichVu.chiTiet}</p>
 
-                        <form action="DatDichVu" method="post" style="margin-top: 10px;">
+                        <form action="DatDichVu" method="post" style="margin-top: 10px;" onsubmit="return confirmBooking()">
                             <input type="hidden" name="maDV" value="${dichVu.maDV}" />
                             <button type="submit" class="btn-dat-dv">Đặt dịch vụ</button>
                         </form>
@@ -72,6 +72,9 @@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
         </div>
         <% }%>
         <script>
+            function confirmBooking() {
+                return confirm("Bạn có chắc chắn muốn đặt dịch vụ này không?");
+            }
             function closePopup() {
                 document.getElementById("popup").style.display = "none";
             }
