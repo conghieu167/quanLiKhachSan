@@ -61,8 +61,8 @@ public class SearchBooking extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String keyword = request.getParameter("keyword");
-        String ngayDat = request.getParameter("ngayDat");
-        String trangThai = request.getParameter("trangThai");
+        String ngayDat = request.getParameter("checkin");
+        String trangThai = request.getParameter("status");
         BookingDAO bookingDAO = new BookingDAO();
         // Gọi hàm tìm lọc trong DAO
         List<DatPhong> filteredList = bookingDAO.getFilteredBookings(keyword, ngayDat, trangThai);

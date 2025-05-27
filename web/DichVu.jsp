@@ -61,7 +61,7 @@
                                     <form id="editServiceForm-${dichVu.maDV}" class="edit-form" action="editService" method="post" style="display: none;">
                                         <input type="hidden" name="maDV" value="${dichVu.maDV}" />
                                         <p class="TenDV"><strong>Tên:</strong> ${dichVu.tenDV}</p>
-                                        <p><strong>Giá:</strong> <input type="number" name="giaTien" value="${dichVu.giaTien}" required /></p>
+                                        <p><strong>Giá:</strong> <input type="number" name="giaTien" min ="0" value="${dichVu.giaTien}" required /></p>
                                         <p><strong>Chi tiết:</strong> <input type="text" name="chiTiet" value="${dichVu.chiTiet}" required /></p>
                                         <div class="action-buttons">
                                             <button type="submit" class="save-btn">Lưu</button>

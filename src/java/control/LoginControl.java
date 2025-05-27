@@ -48,8 +48,7 @@ public class LoginControl extends HttpServlet {
                 }
             }
         } else {
-            request.setAttribute("errorMessage", "Sai tên đăng nhập hoặc mật khẩu.");
-            request.getRequestDispatcher("login.jsp").forward(request, response);
+            response.sendRedirect("login.jsp?error=true");
         }
     }
 

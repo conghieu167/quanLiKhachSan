@@ -88,7 +88,7 @@
                                     </div>
                                     <div class="info-row">
                                         <span class="label">Họ và tên:</span>
-                                        <input type="text" name="tenKH" value="${user.tenKH}" class="input" required />
+                                        <input type="text" maxlength="50" name="tenKH" value="${user.tenKH}" class="input" required />
                                     </div>
                                     <div class="info-row">
                                         <span class="label">Số CCCD:</span>
