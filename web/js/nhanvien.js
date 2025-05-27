@@ -23,6 +23,17 @@ function confirmDelete(maNV) {
     window.location.href = "delete?maNV=" + maNV;
   }
 }
+function showEditForm(maNV) {
+                // Ẩn tất cả các dòng form sửa trước đó
+                document.querySelectorAll('.edit-form').forEach(row => {
+                    row.style.display = 'none';
+                });
+                const editRow = document.getElementById("editForm-" + maNV);
+
+                if (editRow) {
+                    editRow.style.display = 'table-row';
+                }
+            }
 function cancelEdit() {
     const editForms = document.querySelectorAll('.edit-form');
     editForms.forEach(form => {
